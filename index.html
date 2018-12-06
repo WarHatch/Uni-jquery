@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="lifeExpectancy">
+        <form name="forma" action="rezultatas.html" method="post">
+            Vardas*: <input type="text" name="name" class="mandatory"><br>
+            Pavardė*: <input type="text" name="lastname" class="mandatory"><br>
+            Amzius: <input required type="text" name="age" class="normal_num"><br>
+            Data: <input type="date" name="date"> TODO: būtina naudoti Date objektą <br>
+            <br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+        </form>
+        <hr>
+        <tr>
+            <th rowspan="4">People</th>
+            <th colspan="2">less than 65</th>
+            <th colspan="2">less than 40</th>
+            <th colspan="2">less than 20</th>
+        </tr>
+        <tr>
+            <th>Men</th>
+            <th>Women</th>
+            <th>Men</th>
+            <th>Women</th>
+            <th>Men</th>
+            <th>Women</th>
+        </tr>
+        <tr>
+            <td>82 years</td>
+            <td>85 years</td>
+            <td>78 years</td>
+            <td>82 years</td>
+            <td>77 years</td>
+            <td>81 years</td>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        // var element = $(".mandatory");
+        jQuery(function () {
+            $(".mandatory").hide();
+        });
+    </script>
+</body>
+
+</html>
