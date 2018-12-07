@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <table id="lifeExpectancy">
+    <section>
         <form name="forma" action="rezultatas.html" method="post">
             <div class="validated-field">
                 Name*: <input type="text" name="name" class="mandatory">
@@ -27,40 +27,60 @@
                 </div>
             </div>
             <div class="validated-field">
-                Date: <input type="text" name="age" class="date">
+                Date: <input type="text" name="date" class="date">
                 <div class="error">
                     Invalid date input
                 </div>
             </div>
             <br>
-            <input type="submit" value="Send">
-            <input type="reset" value="Reset">
         </form>
-        <hr>
-        <tr>
-            <th rowspan="4">People</th>
-            <th colspan="2">less than 65</th>
-            <th colspan="2">less than 40</th>
-            <th colspan="2">less than 20</th>
-        </tr>
-        <tr>
-            <th>Men</th>
-            <th>Women</th>
-            <th>Men</th>
-            <th>Women</th>
-            <th>Men</th>
-            <th>Women</th>
-        </tr>
-        <tr>
-            <td>82 years</td>
-            <td>85 years</td>
-            <td>78 years</td>
-            <td>82 years</td>
-            <td>77 years</td>
-            <td>81 years</td>
-        </tr>
-    </table>
-
+    </section>
+    <hr>
+    <section id="opinion-article">
+        <h1>A headline about our despicable party leader</h1>
+        <p style="color: red">
+            What he has done
+        </p>
+        <ol>
+            <li>
+                Wasn't populistic enough
+            </li>
+            <li>
+                Didn't pay taxes
+            </li>
+            <li>
+                Enjoyed the emoji movie
+            </li>
+            <!-- Expecting a new item to manifest through the magic of jQuery -->
+        </ol>
+    </section>
+    <hr>
+    <section>
+        <table id="lifeExpectancy">
+            <tr>
+                <th rowspan="4">People</th>
+                <th colspan="2">less than 65</th>
+                <th colspan="2">less than 40</th>
+                <th colspan="2">less than 20</th>
+            </tr>
+            <tr>
+                <th>Men</th>
+                <th>Women</th>
+                <th>Men</th>
+                <th>Women</th>
+                <th>Men</th>
+                <th>Women</th>
+            </tr>
+            <tr>
+                <td>82 years</td>
+                <td>85 years</td>
+                <td>78 years</td>
+                <td>82 years</td>
+                <td>77 years</td>
+                <td>81 years</td>
+            </tr>
+        </table>
+    </section>
 
 </body>
 
