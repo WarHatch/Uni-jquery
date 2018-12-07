@@ -1,13 +1,20 @@
-jQuery(function () {
-    $(".input-field").each(function (element) {
-            // e.preventDefault();
-            let inputElement = $(this).children("input");
-            let errorElement = $(this).children(".error");
+function isNormalInteger(str) {
+    return /^([1-9]\d*)$/.test(str);
+}
 
-            inputElement.on('input', function (input) {
-                inputElement.val() === '' ? errorElement.show() : errorElement.hide();
-            });
+function validateAllInputBy(className, validationFunc) {
+    $(".validated-field").each(function (element) {
+        let inputElement = $(this).children(`input[class=${className}]`);
+        let errorElement = $(this).children(".error");
 
-        // console.log(this);
+        inputElement.on('input', function () {
+            validationFunc(inputElement.val()) ? errorElement.hide() : errorElement.show();
+        });
     });
+}
+
+jQuery(function () {
+    validateAllInputBy('mandatory', (value) => value); // empty strings are falsy
+    validateAllInputBy('integer', (value) => isNormalInteger(value));
+    validateAllInputBy('date', (value) => Date.parse(value));
 });

@@ -14,14 +14,24 @@
 <body>
     <table id="lifeExpectancy">
         <form name="forma" action="rezultatas.html" method="post">
-            <div class="input-field">
-                Name*: <input type="text" name="name">
+            <div class="validated-field">
+                Name*: <input type="text" name="name" class="mandatory">
                 <div class="error">
-                    Please fill out the name field
+                    Name field is mandatory
                 </div>
             </div>
-            Amzius: <input type="text" name="age" class="normal_num"><br>
-            Data: <input type="date" name="date"><br>
+            <div class="validated-field">
+                Age: <input type="text" name="age" class="integer">
+                <div class="error">
+                    Input must be positive integer
+                </div>
+            </div>
+            <div class="validated-field">
+                Date: <input type="text" name="age" class="date">
+                <div class="error">
+                    Invalid date input
+                </div>
+            </div>
             <br>
             <input type="submit" value="Send">
             <input type="reset" value="Reset">
