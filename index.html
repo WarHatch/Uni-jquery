@@ -13,7 +13,7 @@
 
 <body>
     <section>
-        <form name="forma" action="rezultatas.html" method="post">
+        <form id="userForm" name="form" method="post">
             <div class="validated-field">
                 Name*: <input type="text" name="name" class="mandatory">
                 <div class="error">
@@ -32,7 +32,8 @@
                     Invalid date input
                 </div>
             </div>
-            <br>
+            <input type="submit" value="Submit form">
+            <!-- <input type="reset" value="Clean fields"> -->
         </form>
     </section>
     <hr>
@@ -56,28 +57,17 @@
     </section>
     <hr>
     <section>
-        <table id="lifeExpectancy">
+        <h2>Reader's data</h2>
+        <table id="readerData">
             <tr>
-                <th rowspan="4">People</th>
-                <th colspan="2">less than 65</th>
-                <th colspan="2">less than 40</th>
-                <th colspan="2">less than 20</th>
+                <th>Name:</th>
+                <th>Age:</th>
+                <th>Date:</th>
             </tr>
             <tr>
-                <th>Men</th>
-                <th>Women</th>
-                <th>Men</th>
-                <th>Women</th>
-                <th>Men</th>
-                <th>Women</th>
-            </tr>
-            <tr>
-                <td>82 years</td>
-                <td>85 years</td>
-                <td>78 years</td>
-                <td>82 years</td>
-                <td>77 years</td>
-                <td>81 years</td>
+                <td id="name">N/A</td>
+                <td id="age">N/A</td>
+                <td id="date">N/A</td>
             </tr>
         </table>
     </section>
